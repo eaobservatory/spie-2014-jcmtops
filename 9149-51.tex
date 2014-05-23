@@ -23,6 +23,9 @@
 %  installations.
 \usepackage{graphicx}
 
+\usepackage{upgreek}
+\usepackage{color}
+
 \title{Setting the standard: 25 years of operating the JCMT}
 
 %>>>> The author is responsible for formatting the
@@ -64,6 +67,8 @@ Graham~S.~Bell\supit{a}
 \newcommand{\mnras}{MNRAS}
 \newcommand{\procspie}{Proc.\ SPIE}
 \newcommand{\aspconf}{ASP Conf.\ Ser.}
+\newcommand{\pasp}{PASP}
+\newcommand{\apj}{ApJ}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %>>>> uncomment following for page numbers
@@ -115,7 +120,7 @@ has only increased its scientific output and impact as the years have
 passed. The reason for the continued relevance of the JCMT throughout
 this time is partially the result of an ever-evolving and improving
 instrument suite which has continued to break new ground in
-submillimeter astronomy, from UKT14~\cite{1990MNRAS.243..126D} to SCUBA \cite{holland1999}
+submillimeter astronomy, from UKT14\cite{1990MNRAS.243..126D} to SCUBA\cite{holland1999}
 and now SCUBA-2\cite{holland2013}, as well as the 16-element heterodyne
 HARP array\cite{buckle} and its backend ACSIS\cite{2000SPIE.4015..114H}. Another key
 reason for this productivity has been the design and implementation of
@@ -138,14 +143,16 @@ a visiting observer. The observing cycle consists of two semesters
 countries, the United Kingdom (60$\%$) Canada (20$\%$) and the
 Netherlands (20$\%$) had separate time allocation committees (TACs) to
 which observers from those countries would submit project
-proposals. After the withdrawal of the Netherlands in 2013, the
+proposals.
+{\color{red} No mention of UH?}
+After the withdrawal of the Netherlands in 2013, the
 process continued with the remaining partner countries. The JCMT has
 operated a flexibly-scheduled observing queue for nearly fifteen
 years. Observing blocks are allocated to each country queue, and the
 TACs provide priority scheduling rules to determine the selection of
 projects given weather conditions, availability and priority.
 
-Flexible scheduling imposes as series of demands on the operation of
+Flexible scheduling imposes a series of demands on the operation of
 the telescope in order to ensure efficiency and high-quality data
 output. Weather information must be known to a high-quality and
 high-time-resolution, the telescope software interfaces with the
@@ -154,23 +161,24 @@ instrument-switching should be fast in order to reduce down-time and
 increase flexibility in changing weather conditions, and the observing
 and reduction software should allow a tight feedback loop for the TSS
 and observer to monitor data quality. Finally, this information should
-be swiftly available to a P.I. who may not be present at the telescope
+be swiftly available to a P.I., who may not be present at the telescope
 during their observations, in order to ensure their project is
 completed as they require.
 
-In addition to P.I. projects submitted to the TACs, the JCMT has
-initiated a series of JCMT Legacy Surveys (JLS) with the introduction
+In addition to P.I.\ projects submitted to the TACs, the JCMT has
+initiated a series of JCMT Legacy Surveys (JLS)\cite{2005prpl.conf.8370M,2007PASP..119..102P,2007PASP..119..842M,2007PASP..119..855W,2007arXiv0704.3202T,2009ApJ...693.1736W,2013MNRAS.432...53G}
+with the introduction
 of the two wide-field array instruments, HARP and SCUBA-2. These
 surveys were started in 2007, after HARP was commissioned on the
 telescope, with the SCUBA-2 components of the surveys starting in
 2011. When it became clear that the JCMT would not continue operating
 past September 2014, it was recognised that it would be a considerable
 challenge to complete these surveys in the remaining time. It was felt
-that allowing P.I. projects on the telescope was still an important
+that allowing P.I.\ projects on the telescope was still an important
 driver for the JCMT, but the survey allocations were increased to
-60$\%$ of the available time in order to improve completion
+60\,\% of the available time in order to improve completion
 potential. To further improve JLS completion, a new observing mode of
-'Extended Observing', or partial remote operations from the JAC in
+``Extended Observing'', or partial remote operations from the JAC in
 Hilo was added in early 2014. This mode and its impact is discussed in
 Section~\ref{sec:eo}.
 
@@ -181,7 +189,7 @@ high-quality science observations completed by flexibly selecting
 observations that are most appropriate for the conditions (weather and
 source availability), and any other set of requirements (such as a
 TAC-imposed project priority) that the Observatory may determine is
-desired. \cite{tilanus2000} discusses the considerations for
+desired. Ref.\ \citenum{tilanus2000} discusses the considerations for
 scheduling that were initially taken by the JCMT upon the first
 implementation of flexible scheduling in the late 1990s.
 
@@ -189,34 +197,34 @@ At submillimeter wavelengths, the appropriateness of queuing a given
 project is defined first and foremost by the atmospheric opacity due
 to water vapour. The transmission properties of the atmosphere above
 Mauna Kea and their application to JCMT instruments and flexible
-scheduling are described in detail elsewhere (\cite{robson2002}). A
+scheduling are described in detail elsewhere\cite{robson2002}. A
 linear relation exists between the measurable precipitable water
-vapour (PWV) in mm and the opacity at the JCMT instrument
-wavebands. This PWV is measured both by the adjacent CSO radiometer at
-225GHz and an in-cabin line-of-sight 183GHz radiometer\cite{wiedner}),
+vapour (PWV) in millimetres and the opacity at the JCMT instrument
+wavebands.\cite{2013MNRAS.430.2534D,archibald} This PWV is measured both by the adjacent CSO radiometer at
+225GHz and an in-cabin line-of-sight 183\,GHz radiometer\cite{wiedner,2008SPIE.7012E.137D},
 allowing the atmospheric conditions to be measured at high
 time-resolution. To allow for practical assessment of atmospheric
-conditions, the PWV in mm is divided up into five weather 'bands' or
+conditions, the PWV, in millimetres, is divided up into five weather ``bands'' or
 grades, and it is these grades that dictate the first-level scheduling
 constraints for a given project.
 
 \begin{table}
-\caption{JCMT Weather Grades used for Project Selection. This table is an updated version of a table provided by \cite{robson2002}.}
+\caption{JCMT Weather Grades used for Project Selection. This table is an updated version of a table provided by Ref.\ \citenum{robson2002}.}
 \label{tab:grades}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\rule[-1ex]{0pt}{3.5ex}  Grade & PWV(mm) & CSO 225GHz $\tau_{zen}$ & 850$\mu$m $\tau_{zen}$ & 450$\mu$m $\tau_{zen}$ & Notes  \\
+\rule[-1ex]{0pt}{3.5ex}  Grade & PWV(mm) & CSO 225GHz $\tau_{zen}$ & 850$\upmu$m $\tau_{zen}$ & 450$\upmu$m $\tau_{zen}$ & Notes  \\
 \hline
 \rule[-1ex]{0pt}{3.5ex}  1 & $< 1$ & $\tau<0.05$ & $> 82\%$ &   $ > 28\%$& Super dry, shortest $\lambda$ projects\\&&&&& that require highest sensitivity\\
 \hline
-\rule[-1ex]{0pt}{3.5ex}  2 & $1.0 < 1.6$ & $0.05<\tau<0.08$ &  $ \approx77\%$ & $\approx19\%$ &Very dry, high sensitivity 850$\mu$m projects\\&&&&& and 450$\mu$m spectroscopy\\
+\rule[-1ex]{0pt}{3.5ex}  2 & $1.0 < 1.6$ & $0.05<\tau<0.08$ &  $ \approx77\%$ & $\approx19\%$ &Very dry, high sensitivity 850$\upmu$m projects\\&&&&& and 450$\upmu$m spectroscopy\\
 \hline
-\rule[-1ex]{0pt}{3.5ex}  3 & $1.6 < 2.4$  & $0.08<\tau<0.12$ &  $\approx67\%$ & $\approx7\%$ & Dry, brighter 850$\mu$m targets\\ &&&&&(eg. large-scale galactic surveys)\\
+\rule[-1ex]{0pt}{3.5ex}  3 & $1.6 < 2.4$  & $0.08<\tau<0.12$ &  $\approx67\%$ & $\approx7\%$ & Dry, brighter 850$\upmu$m targets\\ &&&&&(eg. large-scale galactic surveys)\\
 \hline
 \rule[-1ex]{0pt}{3.5ex}  4 & $2.4 < 4.0$ & $0.12<\tau<0.2$ &  $\approx53\%$ & $\approx2\%$ & Poor: long $\lambda$ spectroscopy \\&&&&&and bright 345GHz surveys\\
 \hline
-\rule[-1ex]{0pt}{3.5ex}  5 & $ > 4.0 $ & $0.2<\tau$ & $ < 45\%$ & $< 0.5\%$&  Wet: spectroscopy at $\lambda > 850 \mu$m \\
+\rule[-1ex]{0pt}{3.5ex}  5 & $ > 4.0 $ & $0.2<\tau$ & $ < 45\%$ & $< 0.5\%$&  Wet: spectroscopy at $\lambda > 850 \upmu$m \\
 \hline
 
 \end{tabular}
@@ -225,10 +233,10 @@ constraints for a given project.
 
 As the opacity increases, more time is required on sky to reach the
 same sensitivity at a given wavelength. The transmission varies
-strongly with observation wavelength. The 450$\mu$m atmospheric window
+strongly with observation wavelength. The 450\,$\upmu$m atmospheric window
 requires much dryer conditions to be an effective observing
 band. Table~\ref{tab:grades} reproduces a similar table by
-\cite{robson2002} which describes the properties of each grade and the
+Ref.\ \citenum{robson2002} which describes the properties of each grade and the
 relevant transmission properties at the main SCUBA-2 filter
 bands. Figure~\ref{fig:tau} collates the typical percentage of time
 each month that the opacity is measured in a particular band, averaged
@@ -244,6 +252,7 @@ over nightly measurements taken every night from 2003 to 2014.
 \end{figure}
 
 \subsection{Project Priority}
+
 In the automated queue, potential observations are selected, and then
 ordered, by the following parameters:
 \begin{itemize}
@@ -256,8 +265,8 @@ A good deal of discussion has occurred regarding the most effective
 methodology for determining project priority and how it translates to
 project completion and scientific impact\cite{adamson2004,robson2002}.
 In practice, the case at JCMT was further complicated by the fact that
-the facility was funded jointly by the UK (60$\%$), Canada and the
-Netherlands (20$\%$ each) and thus were allocated the respective
+the facility was funded jointly by the UK (60\,$\%$), Canada and the
+Netherlands (20\,$\%$ each) and thus were allocated the respective
 amount of telescope time as a result. The countries had separate TACs,
 and thus it was left to each TAC to determine their own flexible
 scheduling rules for their allocated blocks as well as how many
@@ -270,8 +279,8 @@ scheduling, there have been adaptations in instrument design, and
 observatory software systems. The ability to switch swiftly between
 instruments is perhaps the most powerful of these. The current
 instrument suite consists of three heterodyne receivers, HARP
-(345GHz), RxW (690GHz) and RxA (230GHz) and the continuum camera,
-SCUBA-2 (simultaneous 450$\mu$m and 850$\mu$m). Including pointing,
+(345GHz), RxW (690GHz) and RxA3 (230GHz) and the continuum camera,
+SCUBA-2 (simultaneous 450\,$\upmu$m and 850\,$\upmu$m). Including pointing,
 focus and instrument setup times, it takes less than fifteen minutes
 to switch from a completed observation with one instrument to the
 first science observation with another. The critical developments
@@ -279,7 +288,7 @@ required to allow this include a rotating tertiary mirror in the
 cabin, and a sophisticated telescope software interface between the
 telescope, instruments and observer.\cite{rees2002,2011tfa..confE..42J} It has also
 been a requirement that any instrument commissioned at JCMT must
-support this shared operational and data-reduction software to
+support this shared operational and data-reduction software\cite{cavanagh2008} to
 maintain the efficiency of these observing interfaces. Fast-switching
 between instruments has the added benefit of reducing 'dead-time'
 resulting from instrument-related faults, as a time-consuming issue
@@ -294,21 +303,23 @@ original problem is resolved.
 Arguments against flexible scheduling often highlight the concern that
 PIs are removed from adapting and assessing the quality of their
 observations in a flexible regime, and that an observer present at the
-telescope may have neither the skills or interest in providing such
+telescope may have neither the skills nor interest in providing such
 assessment on the time-scales needed to ensure good data
-quality. Thus, as noted by \cite{tilanus2000}, a tight feedback loop
-between the Observatory and PI is necessary. Additionally, there is a
-need to provide general and well-documented quality assessment tools
-at the telescope to aid inexperienced or differently-skilled observers
-in data monitoring. The concept for an overarching OMP that supported
-both the JCMT and UKIRT observing was developed to provide an
-observation preparation tool for PIs, a tool to query the database
-given the weather constraints and priority as defined by the given
-country queue rules, an extensive database-generated set of web pages
-to allow the PI to assess project completion, quality and to retrieve
-data files, and a method for support astronomers to communicate with
-PIs to give feedback and adaptations on observing plans. Details of
-the OMP can be seen in \cite{2011tfa..confE..42J}.
+quality. Thus, as noted by Ref.\ \citenum{tilanus2000}, a tight
+feedback loop between the Observatory and P.I.\ is
+necessary. Additionally, there is a need to provide general and
+well-documented quality assessment tools at the telescope to aid
+inexperienced or differently-skilled observers in data monitoring. The
+concept for an overarching observation management system that
+supported both the JCMT and UKIRT observing was developed to provide
+an observation preparation tool for P.I.s, a tool to query the
+database given the weather constraints and priority as defined by the
+given country queue rules, an extensive database-generated set of web
+pages to allow the P.I.\ to assess project completion, quality and to
+retrieve data files, and a method for support astronomers to
+communicate with P.I.s to give feedback and adaptations on observing
+plans. This was all implemented as part of the Observation Management
+Project (OMP)\cite{2011tfa..confE..42J,economou2002}.
 
 The OMP provides a comprehensive feedback system which automatically
 logs project completion, observations, nightly conditions and faults
@@ -317,7 +328,7 @@ progress. The fault system is an example of the ways in which
 automated accounting and feedback improve observatory performance. An
 example search of the JCMT fault system is shown in
 Figure~\ref{fig:faulteg}. It can be seen that faults fall into
-specific categories based on system (eg SCUBA-2), type (eg
+specific categories based on system (e.g., SCUBA-2), type (e.g.,
 electronic), current status, and time lost. The observer will be
 notified if a fault potentially affected their data, and be able to
 seek JCMT support staff assistance if there is a concern. The fault
@@ -328,7 +339,7 @@ tool. Finally, the tracking of time lost due to individual faults
 provides a tight feedback loop in prioritising those issues which have
 the greatest impact on observing efficiency and quality.
 
- \begin{figure}[ht]
+ \begin{figure}[t]
    \begin{center}
    \begin{tabular}{c}
    \includegraphics[height=10cm]{faultexample.png}
@@ -347,10 +358,10 @@ database, making comparison and tracking relatively simple. It is
 interesting to note that project time measured on a weekly and monthly
 basis shows very little variation in the ten years since monitoring
 began. In 2006, JCMT switched from a two-shift, 16-hour observing
-schedule to a single, 12-hour observing night. Whilst the 'on-sky'
+schedule to a single, 12-hour observing night. Whilst the ``on-sky''
 project time dips understandably when this mode began, the advantage
 lay in that the early-evening shift was systematically poorer in
-observing conditions, and less high-quality data obtained as a
+observing conditions, and less high-quality data were obtained as a
 result. The difficulty lies in quantifying the impact of taking less,
 but higher-quality data after this change was enacted.
 
@@ -369,7 +380,8 @@ observer regarding observing priorities, methodology and quality
 assessment.
 
 \subsection{Publications}
- \begin{figure}[ht]
+
+ \begin{figure}[t]
    \begin{center}
    \begin{tabular}{c}
    \includegraphics[height=5cm]{JCMT_publications.png}
@@ -383,8 +395,8 @@ publications from its science in each year. This is presented for the
 JCMT in Figure~\ref{fig:pub}. The JCMT is the most successful
 single-dish submillimeter telescope in the world and this is reflected
 in its high output of papers. The bulk of these papers are from SCUBA
-data - to the end of 2013 over 800 papers have been published from
-SCUBA, over 50$\%$ of the entire publication output of the
+data -- to the end of 2013 over 800 papers have been published from
+SCUBA, over 50\,\% of the entire publication output of the
 telescope. One of the frustrations of using this metric is the long
 delay between acquisition of science data and the publication of its
 results. The average is suggested to be approximately four years. As
@@ -398,22 +410,22 @@ suggest a potential further factor of three increase in the next year.
 \subsection{Fault Rates}\label{sec:rates}
 
 The JCMT board sets a requirement that the observatory maintain a
-fault rate of less than 5$\%$. For 12-hour nightly shifts, this
-equates to a approximately a half-hour of time-lost due to faults. The
+fault rate of less than 5\,\%. For 12-hour nightly shifts, this
+equates to approximately a half-hour of time-lost due to faults. The
 JCMT fault-rate averaged on a monthly basis since February 2003 is
 shown in Figure~\ref{fig:fault}. The figure serves to highlight the
 benefit of tracking fault-rates in this manner. The consistently
 higher fault periods can be directly correlated with instrument
-commissioning - notably the period in late 2006 and early 2007 when
+commissioning -- notably the period in late 2006 and early 2007 when
 the HARP and ACSIS instruments were commencing operation. This fault
-percentage is calculated with respect to 'clear-time' which first
+percentage is calculated with respect to ``clear-time'' which first
 deducts time lost to weather from the 12-hour available night. Thus a
 ten-minute fault on a night with many hours lost to weather is
 reflected as a higher percentage of that night's available time, as
 opposed to the same fault on a night with no weather-imposed facility
 closure.
 
- \begin{figure}
+ \begin{figure}[t]
    \begin{center}
    \begin{tabular}{c}
    \includegraphics[height=3.5cm]{Faultrate2003_2014.png}
@@ -432,9 +444,9 @@ needed. The detailed logging of project completion and other metrics
 was only instigated with the advent of the OMP, when flexible
 scheduling was already in place, so we lack sufficient classically
 scheduled metrics for this comparison. Simulating this comparison
-therefore required returning and 'classically-scheduling' two full
+therefore required returning and ``classically-scheduling'' two full
 semesters of project time in January 2007 - January 2008. This was a
-'blind' scheduling, in the sense that the scheduler was asked only to
+``blind'' scheduling, in the sense that the scheduler was asked only to
 take the project allocations and priorities given by the three TACs
 for those semesters and allocate time to them according to the
 proportions of time each country queue was allowed. The scheduler had
@@ -442,7 +454,7 @@ no other information regarding weather conditions, faults that
 occurred during that year or any other information, so as best to
 simulate what would occur prior to the start of any normal semester.
 
-\begin{figure}[ht]
+\begin{figure}[t]
    \begin{center}
    \begin{tabular}{c}
    \includegraphics[height=3.5cm]{projecthours_cumul_2007.png}
@@ -451,13 +463,14 @@ simulate what would occur prior to the start of any normal semester.
    \caption{\label{fig:cvf_hours} Cumulative plot of the number of project hours completed as a function of project priority in the measured flexible scheduling case (red) and the simulated classical allocation (grey) for the United Kingdom (left), Canadian (centre) and Netherlands queues (right).  }
 
 \end{figure}
-\begin{figure}
+
+\begin{figure}[t]
    \begin{center}
    \begin{tabular}{c}
    \includegraphics[height=3.5cm]{numprojcomp_cumul_2007.png}
    \end{tabular}
    \end{center}
-   \caption{\label{fig:cvf_proj} Cumulative plot of the number of projects completed to better than 80$\%$ as a function of project priority for the measured flexible scheduling case (blue) and simulated classical allocation (green) for the  United Kingdom (left), Canadian (centre) and Netherlands queues (right).}
+   \caption{\label{fig:cvf_proj} Cumulative plot of the number of projects completed to better than 80\,\% as a function of project priority for the measured flexible scheduling case (blue) and simulated classical allocation (green) for the  United Kingdom (left), Canadian (centre) and Netherlands queues (right).}
 \end{figure}
 
 The classical schedule was then taken and the known metrics from the
@@ -466,9 +479,9 @@ time they would have received. The following assumptions were made:
 \begin{itemize}
 \item If the weather grade during the night was equal to or better
   than that required for the project, the project was allocated the
-  full 'clear-time' available from that night (available time minus
+  full ``clear-time'' available from that night (available time minus
   fault time).
-\item If the weather grade was one grade 'poorer' than that required,
+\item If the weather grade was one grade ``poorer'' than that required,
   the project was allocated half the time it would have obtained in
   its required grade.
 \item If the weather was two or more grades poorer than required, no
@@ -497,12 +510,12 @@ have been allocated time in a classical regime. In comparing directly
 the same 60 projects that were scheduled in both the flexible and
 classical regime, 1233 hours were observed in the flexible case,
 compared to 986 hours in the classical queue. Of these, 25 projects
-were completed to better than 80$\%$ of their requested time, compared
+were completed to better than 80\,\% of their requested time, compared
 with 16 in the classical case. If one takes into account the
 additional 32 projects that got some amount of time in the flexible
 case, the additional hours observed takes the total project time
 observed in the flexible case to 2117 hours and an additional 12
-projects completed to better than 80$\%$.
+projects completed to better than 80\,\%.
 
 Other notable results that are not shown in the figure include the
 fact that in the flexible-schedule mode, more projects with small time
@@ -530,7 +543,7 @@ wider-field, high-speed and -sensitivity survey instruments to improve
 sky coverage and depth. In the continuum, SCUBA (1997 - 2005) forged
 the path for SCUBA-2 (2009 to present), and in the heterodyne, the
 16-element 345GHz HARP (2007 to present) replaced the single-element
-RxB receiver. In Figure~\ref{fig:sc2}, the cumulative sky coverage of
+RxB3 receiver.\cite{1998SPIE.3357..620C} In Figure~\ref{fig:sc2}, the cumulative sky coverage of
 SCUBA and SCUBA-2 is plotted. The coverage is in square degrees of sky
 and is presented on a logarithmic scale. This is because with the
 advent of SCUBA-2, the increase in sky coverage over the total
@@ -570,10 +583,9 @@ entirely on the scientific goals of the observations.
 
 \subsection{The impact of Extended Observing}\label{sec:eo}
 
-
 As previously mentioned, with only an average of less than half an
 hour of fault loss per night, and consistent calibration rates of
-approximately 25$\%$, the overall project time per night is extremely
+approximately 25\,\%, the overall project time per night is extremely
 consistent and affected primarily by any time lost to weather. As such
 the only way of truly increasing project time is to extend operations
 beyond the current 12-hour nightly shift. UKIRT shifted to fully
@@ -584,7 +596,7 @@ and as such a mode was designed whereby at the end of the 12-hour
 shift and prior to the arrival of the JCMT daycrew, operational
 control is handed over from the summit operator and observer to a
 remote operator at JACs Hilo facility. Four days a week, this
-additional project time is between an 1.5 and 2.5 hours. Friday
+additional project time is between 1.5 and 2.5 hours. Friday
 through Sunday, when no daycrew are at the summit, this time extends
 into the afternoon, and up to 5 hours of projects can be observed.
 
@@ -595,7 +607,7 @@ possible, knowing the average time extended observing gains, an
 estimate of the increase in completion of the surveys can be
 estimated. Figure~/ref{fig:eo} shows the increase in completion for
 the surveys in total with and without extended observing. An
-additional 8$\%$ completion can be achieved in only six months (a
+additional 8\,\% completion can be achieved in only six months (a
 total of XX hours) with the addition of this mode.
 
 \begin{figure}[ht]
@@ -614,21 +626,21 @@ The JCMT strives in its operations to continually optimise its
 scientific output and impact. Over the course of 25 years of
 operation, the legacy of scientific data that the facility has
 produced will continue to provide scientific value for decades to
-come.n this paper, we have also demonstrated the tools and
+come. In this paper, we have also demonstrated the tools and
 methodologies that have been of use in maximising this science output
 and include:
 \begin{itemize}
-\item Flexible scheduling to optimise use of available weather and
-  maximise scientific project completion
-\item Fast instrument switching to reduce dead-time and enhance
-  redundancy
-\item Detailed fault-reporting to optimise the feedback loop between
-  the TSS and operational staff and minimise lost time
-\item An advanced observing feedback interface (OMP) to enhance data
-  delivery and quality information to the P.I. and observer
-\item Highly trained operators to ensure data-quality and observing
-  efficiency
-\item Extended, remote operations to maximise project time
+\item flexible scheduling to optimise use of available weather and
+  maximise scientific project completion;
+\item fast instrument switching to reduce dead-time and enhance
+  redundancy;
+\item detailed fault-reporting to optimise the feedback loop between
+  the TSS and operational staff and minimise lost time;
+\item an advanced observing feedback interface to enhance data
+  delivery and quality information to the P.I. and observer;
+\item highly trained operators to ensure data-quality and observing
+  efficiency;
+\item extended, remote operations to maximise project time.
 \end{itemize}
 
 The JCMT legacy will be ensured by the continuing development of the
