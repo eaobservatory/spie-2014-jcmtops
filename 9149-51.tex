@@ -122,7 +122,7 @@ this time is partially the result of an ever-evolving and improving
 instrument suite which has continued to break new ground in
 submillimetre astronomy, from UKT14\cite{1990MNRAS.243..126D} to SCUBA\cite{holland1999}
 and now SCUBA-2\cite{holland2013}, as well as the 16-element heterodyne
-HARP array\cite{buckle} and its backend ACSIS~\cite{2000SPIE.4015..114H}. Another key
+HARP array\cite{buckle} and its backend ACSIS\cite{2000SPIE.4015..114H}. Another key
 reason for this productivity has been the design and implementation of
 flexible scheduling\cite{1998SPIE.3349..126W,tilanus2000,robson2002}, and the Observation
 Management Project (OMP)\cite{economou2002}.  In 2014, the JCMT now
@@ -194,15 +194,18 @@ At submillimetre wavelengths, the appropriateness of queuing a given
 project is defined first and foremost by the atmospheric opacity due
 to water vapour. The transmission properties of the atmosphere above
 Mauna Kea and their application to JCMT instruments and flexible
-scheduling are described in detail elsewhere\cite{robson2002}. An approximately relation exists between the measurable precipitable water
-vapour (PWV) in millimetres and the opacity at the JCMT instrument
-wavebands.\cite{2013MNRAS.430.2534D,archibald} This PWV is measured both by the adjacent CSO radiometer at
-225\,GHz and an in-cabin line-of-sight 183\,GHz radiometer\cite{wiedner,2008SPIE.7012E.137D}),
-allowing the atmospheric conditions to be measured at high
-time-resolution. To allow for practical assessment of atmospheric
-conditions, the PWV in millimetres is divided up into five weather ``bands'' or
-grades, and it is these grades that dictate the first-level scheduling
-constraints for a given project.
+scheduling are described in detail elsewhere\cite{robson2002}. An
+approximately relation exists between the measurable precipitable
+water vapour (PWV) in millimetres and the opacity at the JCMT
+instrument wavebands.\cite{2013MNRAS.430.2534D,archibald} This PWV is
+measured both by the adjacent CSO radiometer at 225\,GHz and an
+in-cabin line-of-sight 183\,GHz
+radiometer\cite{wiedner,2008SPIE.7012E.137D}), allowing the
+atmospheric conditions to be measured at high time-resolution. To
+allow for practical assessment of atmospheric conditions, the PWV in
+millimetres is divided up into five weather ``bands'' or grades, and
+it is these grades that dictate the first-level scheduling constraints
+for a given project.
 
 \begin{table}
 \caption{JCMT Weather Grades used for Project Selection. This table is an updated version of a table provided by \cite{robson2002}.}
@@ -520,17 +523,71 @@ the time allocation committees would undoubtably have prioritized and
 allocated time much differently if they were classically scheduling
 their time.
 
-Figure~\ref{fig:cvf_uk} presents the comparison between the actual, flexibly-scheduled projects,
-and the same projects when scheduled classically as described
-above for a semester of 2007 for the United Kingdom allocation. The left-hand plot compares the completion in the semester when flexibly-scheduled (dark blue) and the simulated classical case (cyan). The comparison is ranked by priority (high to low from left to right). The right-hand plot shows the full flexibly-scheduled completion of the project (purple) including additional observing when the projects in question were carried-over for further observing in later semesters, which is allowed in the UK queue. The plots show better completion for nearly all high-priority projects, particularly when adding the additional project time in later semesters. It also shows the expected tail-off in completion as priority decreases. Finally, there is completion of projects that were not given time in the classical case, emphasizing the additional projects that can be included flexibly (particularly smaller time allocations) but not in a classical regime. The total completion percentage for the flexible queue was 70\,\% as opposed to 34\,\% in the simulated classical case.\\
+Figure~\ref{fig:cvf_uk} presents the comparison between the actual,
+flexibly-scheduled projects, and the same projects when scheduled
+classically as described above for a semester of 2007 for the United
+Kingdom allocation. The left-hand plot compares the completion in the
+semester when flexibly-scheduled (dark blue) and the simulated
+classical case (cyan). The comparison is ranked by priority (high to
+low from left to right). The right-hand plot shows the full
+flexibly-scheduled completion of the project (purple) including
+additional observing when the projects in question were carried-over
+for further observing in later semesters, which is allowed in the UK
+queue. The plots show better completion for nearly all high-priority
+projects, particularly when adding the additional project time in
+later semesters. It also shows the expected tail-off in completion as
+priority decreases. Finally, there is completion of projects that were
+not given time in the classical case, emphasizing the additional
+projects that can be included flexibly (particularly smaller time
+allocations) but not in a classical regime. The total completion
+percentage for the flexible queue was 70\,\% as opposed to 34\,\% in
+the simulated classical case.
 
-Figure~\ref{fig:cvf_can} presents the same comparison as the previous figure, but for a semester in 2007 for the Canadian queue. Again, the Canadian queue allows carryover of high-priority projects, hence the increased completion in the right-hand plot. In the Canadian case in particular, one is able to see the value of flexible-scheduling in the number of additional projects that not only gained time, but were completed which would not have been allocated any time in a classical regime. The total completion percentage for the flexible queue was 61\,\% as opposed to 23\,\% in the simulated classical case. \\
+Figure~\ref{fig:cvf_can} presents the same comparison as the previous
+figure, but for a semester in 2007 for the Canadian queue. Again, the
+Canadian queue allows carryover of high-priority projects, hence the
+increased completion in the right-hand plot. In the Canadian case in
+particular, one is able to see the value of flexible-scheduling in the
+number of additional projects that not only gained time, but were
+completed which would not have been allocated any time in a classical
+regime. The total completion percentage for the flexible queue was
+61\,\% as opposed to 23\,\% in the simulated classical case.
 
-Figure~\ref{fig:cvf_neth} presents yet again the same comparison but for a semester in 2007 for the Netherlands queue. A number of intriguing differences can be seen here. Firstly, the left and right plots are identical as the Netherlands queue did not carry over any projects into the following semesters, and hence the flexible completion percentages are the same. However, if looking at only the projects that were highly-ranked, the classical scheduling case shows better completion. It is true that significantly more projects were still completed in the flexible case (and indeed 25\% more time was observed overall), however these are for much lower-ranked projects. This invites further analysis. The reason for this disparity can be explained by a few factors. Firstly, the classical time-blocks for the highly-ranked projects fell in very good weather (which can be true in the actual case) and so the simulated projects did very well. Secondly, the Netherlands TAC rules for their visiting observers allows the observer present at the telescope to observe their project if the weather is in the appropriate band, regardless of their priority. Whilst attempts are made to request observers for the highest-ranked projects, in this case the only available sources in the earliest scheduled Netherlands time blocks of the year were for these lower-priority projects. As they were at the telescope, they were able to observe their projects and get the time. The total completion percentage for the flexible queue was 47\,\% as opposed to 27\,\% in the simulated classical case.\\
+Figure~\ref{fig:cvf_neth} presents yet again the same comparison but
+for a semester in 2007 for the Netherlands queue. A number of
+intriguing differences can be seen here. Firstly, the left and right
+plots are identical as the Netherlands queue did not carry over any
+projects into the following semesters, and hence the flexible
+completion percentages are the same. However, if looking at only the
+projects that were highly-ranked, the classical scheduling case shows
+better completion. It is true that significantly more projects were
+still completed in the flexible case (and indeed 25\% more time was
+observed overall), however these are for much lower-ranked
+projects. This invites further analysis. The reason for this disparity
+can be explained by a few factors. Firstly, the classical time-blocks
+for the highly-ranked projects fell in very good weather (which can be
+true in the actual case) and so the simulated projects did very
+well. Secondly, the Netherlands TAC rules for their visiting observers
+allows the observer present at the telescope to observe their project
+if the weather is in the appropriate band, regardless of their
+priority. Whilst attempts are made to request observers for the
+highest-ranked projects, in this case the only available sources in
+the earliest scheduled Netherlands time blocks of the year were for
+these lower-priority projects. As they were at the telescope, they
+were able to observe their projects and get the time. The total
+completion percentage for the flexible queue was 47\,\% as opposed to
+27\,\% in the simulated classical case.
 
-In conclusion this demonstrates that the rules determining how projects are prioritized can affect the completion, which is perhaps not surprising. It could be argued that the Netherlands leaned more towards a classical scheduling approach, and that the completion of high-priority projects suffered as a result, yet it is very much a matter of opinion as to whether those lower-ranked projects which were nevertheless completed were of truly lesser value. It is also worth noting that the UK had twice as much time in which to flex their queue, and that the flexed percentage completion is highest as a result.\\
-
-
+In conclusion this demonstrates that the rules determining how
+projects are prioritized can affect the completion, which is perhaps
+not surprising. It could be argued that the Netherlands leaned more
+towards a classical scheduling approach, and that the completion of
+high-priority projects suffered as a result, yet it is very much a
+matter of opinion as to whether those lower-ranked projects which were
+nevertheless completed were of truly lesser value. It is also worth
+noting that the UK had twice as much time in which to flex their
+queue, and that the flexed percentage completion is highest as a
+result.
 
 \subsection{Sky Coverage with wide-field array instruments}
 \begin{figure}[h]
@@ -550,15 +607,16 @@ wider-field, high-speed and -sensitivity survey instruments to improve
 sky coverage and depth. In the continuum, SCUBA (1997 - 2005) forged
 the path for SCUBA-2 (2009 to present), and in the heterodyne, the
 16-element 345GHz HARP (2007 to present) replaced the single-element
-RxB receiver.\cite{1998SPIE.3357..620C} \\ 
+RxB receiver.\cite{1998SPIE.3357..620C}
 
-In Figure~\ref{fig:sc2}, the left-hand plot shows the cumulative sky coverage of
-SCUBA and SCUBA-2 is plotted. The coverage is in square degrees of sky
-and is presented on a logarithmic scale. This is because with the
-advent of SCUBA-2, the increase in sky coverage over the total
-observed with SCUBA, is a factor of nearly 50, after only three and a
-half years of SCUBA-2 observing, increasing from the total coverage of
-41 square degrees (SCUBA) to 2020 square degrees (SCUBA-2).\\
+In Figure~\ref{fig:sc2}, the left-hand plot shows the cumulative sky
+coverage of SCUBA and SCUBA-2 is plotted. The coverage is in square
+degrees of sky and is presented on a logarithmic scale. This is
+because with the advent of SCUBA-2, the increase in sky coverage over
+the total observed with SCUBA, is a factor of nearly 50, after only
+three and a half years of SCUBA-2 observing, increasing from the total
+coverage of 41 square degrees (SCUBA) to 2020 square degrees
+(SCUBA-2).
 
 The right-hand plot in Figure~\ref{fig:sc2} shows the cumulative sky coverage achieved with
 the heterodyne suite of instruments. To 2007, this consisted of
@@ -571,9 +629,6 @@ that this sky coverage is at a range of frequencies, not simply
 over single-pixel elements. The analysis also does not describe the
 sensitivity depth of the coverage, which varies and of-course depends
 entirely on the scientific goals of the observations.
-
-
-
 
 
 \subsection{The impact of Extended Observing}\label{sec:eo}
